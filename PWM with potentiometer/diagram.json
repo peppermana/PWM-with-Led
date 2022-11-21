@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "author": "Permana Permana",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 18.91, "left": 316.59, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 16.82,
+      "left": 461.37,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 100.5,
+      "left": 429.24,
+      "attrs": { "color": "red", "flip": "1" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 96.37,
+      "left": 537.61,
+      "attrs": { "color": "blue", "flip": "1" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 18.37,
+      "left": 549.19,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "pot1:VCC", "uno:5V", "red", [ "v169.44", "h-175.56" ] ],
+    [ "uno:GND.2", "pot1:GND", "black", [ "v34.54", "h157.06" ] ],
+    [ "pot1:SIG", "uno:A0", "blue", [ "v144.27", "h-118.24" ] ],
+    [ "led1:A", "r1:1", "blue", [ "v0" ] ],
+    [ "led1:C", "uno:GND.3", "black", [ "v125.13", "h-285.82" ] ],
+    [ "r1:2", "uno:5", "blue", [ "v-47.2", "h-313.56" ] ],
+    [ "led2:C", "uno:GND.3", "black", [ "v151.15", "h-380.39" ] ],
+    [ "led2:A", "r2:1", "blue", [ "v0" ] ],
+    [ "r2:2", "uno:6", "blue", [ "v-60.86", "h-411.29" ] ]
+  ]
+}
